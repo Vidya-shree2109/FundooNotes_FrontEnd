@@ -1,0 +1,52 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="main" fxFlex>
+    <div fxLayout="column" fxLayoutAlign="center center" class="mainContainer">
+        <div class="container1">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <h3 style="font-size: 30px; font-style: inherit">
+                    <span style="color: rgb(9, 137, 196)">F</span>
+                    <span style="color: rgb(216, 65, 65)">u</span>
+                    <span style="color: rgb(219, 154, 32)">n</span>
+                    <span style="color: rgb(209, 26, 117)">d</span>
+                    <span style="color: rgb(142, 151, 14)">o</span>
+                    <span style="color: rgb(39, 193, 78)">o</span>
+                    <span style="color: rgb(14, 197, 213)">N</span>
+                    <span style="color: rgb(203, 78, 15)">o</span>
+                    <span style="color: rgb(22, 111, 99)">t</span>
+                    <span style="color: rgb(102, 9, 164)">e</span>
+                    <span style="color: rgb(141, 17, 17)">s</span>
+                </h3>
+                <h2 style="margin-top: -10px;">Sign in</h2>
+                <span style="font-size: 17px; ">Use your Fundoo Account</span>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div fxLayout="column" fxLayoutAlign="start center">
+                    <mat-form-field appearance="outline">
+                        <mat-label>email or phone</mat-label>
+                        <input formControlName="email" matInput placeholder="" />
+                        <mat-hint>You need to confirm that this email is belong to you</mat-hint>
+                        <mat-error>Enter email</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>password</mat-label>
+                        <input formControlName="password" matInput placeholder="" />
+                        <mat-hint>Enter valid password</mat-hint>
+                        <mat-error>Enter password</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-button color="primary" style="margin-top: 10px;" routerLink="/forgetPassword">Forget
+                        password?</button>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="center start">
+                    <mat-hint>Not your computer? Use Guest to sign in privately</mat-hint>
+                    <a href="https://support.google.com/accounts/answer/41078?hl=en&utm_source=google-account&utm_medium=home-support-panel"
+                        style="margin-top: 30px;margin-bottom: 20px;">Learn more</a>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <button mat-button color="primary" routerLink="/resister">Create account</button>
+                    <button mat-raised-button color="primary">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
